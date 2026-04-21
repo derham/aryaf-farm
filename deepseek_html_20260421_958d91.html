@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ارياف لودج والمزرعة | استرخاء وطبيعة في طبب</title>
+    <!-- Font Awesome 6 (Free Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Tajawal for modern Arabic look -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(145deg, #fef9e6 0%, #fff5e8 100%);
+            color: #2c2a24;
+            scroll-behavior: smooth;
+        }
+
+        /* container */
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        /* header with images slider / gallery */
+        .hero-header {
+            background: #2f4b2f;
+            border-radius: 0 0 35px 35px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .image-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+            background: #e9d9b5;
+            padding: 10px 10px 0 10px;
+        }
+
+        .image-strip img {
+            width: calc(25% - 5px);
+            min-width: 160px;
+            flex: 1 1 180px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 28px 28px 12px 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            border: 2px solid #fef3cf;
+        }
+
+        .image-strip img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+        }
+
+        /* date time elegant card */
+        .datetime-card {
+            background: rgba(255, 248, 225, 0.9);
+            backdrop-filter: blur(5px);
+            margin: -30px auto 30px auto;
+            width: fit-content;
+            padding: 12px 35px;
+            border-radius: 60px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border: 1px solid #e5cf9e;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: #5a3e1b;
+            text-align: center;
+            background: #fff9ef;
+        }
+
+        .datetime-card i {
+            margin-left: 12px;
+            color: #b87333;
+        }
+
+        /* general info box */
+        .info-box {
+            background: #ffffffdd;
+            background: linear-gradient(105deg, #ffffff 0%, #fef7e8 100%);
+            padding: 28px 30px;
+            border-radius: 48px;
+            margin-bottom: 45px;
+            box-shadow: 0 12px 25px rgba(0,0,0,0.05);
+            border-right: 8px solid #7a9e3e;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .info-box h2 {
+            color: #3c6b2f;
+            font-weight: 800;
+            margin-bottom: 18px;
+            font-size: 1.9rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .info-box p {
+            margin-bottom: 12px;
+        }
+
+        /* sections grid */
+        .sections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 35px;
+            margin: 50px 0;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 40px;
+            overflow: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f0e2c5;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 35px rgba(90, 60, 30, 0.15);
+        }
+
+        .card-img {
+            height: 210px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .card-content {
+            padding: 25px 22px 30px;
+        }
+
+        .card-content h3 {
+            font-size: 1.9rem;
+            color: #2c5e2a;
+            margin-bottom: 16px;
+            font-weight: 800;
+            border-right: 6px solid #e0b354;
+            padding-right: 15px;
+        }
+
+        .card-content p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #3e3a30;
+            margin-bottom: 15px;
+        }
+
+        .card-content ul {
+            padding-right: 20px;
+            margin: 15px 0;
+        }
+
+        .card-content li {
+            margin: 8px 0;
+            list-style-type: circle;
+        }
+
+        .badge {
+            background: #f5e2b2;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #6b4c1c;
+            margin-top: 10px;
+        }
+
+        /* footer */
+        .footer {
+            background: #1e3a1e;
+            color: #fef2da;
+            border-radius: 45px 45px 0 0;
+            padding: 45px 20px 30px;
+            margin-top: 55px;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 35px;
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.5rem;
+            margin-bottom: 18px;
+            border-right: 3px solid #f6bc5c;
+            padding-right: 12px;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #f0e2bf;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 12px 0;
+            font-size: 1.05rem;
+            transition: 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: #ffdd99;
+            transform: translateX(-4px);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 18px;
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            background: #f5bc70;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #1e3a1e;
+            font-size: 1.6rem;
+            transition: 0.2s;
+        }
+
+        .social-icons a:hover {
+            background: #ffdd99;
+            transform: scale(1.05);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 1px dashed #f0c674;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 780px) {
+            .image-strip img {
+                width: calc(50% - 5px);
+                height: 160px;
+            }
+            .datetime-card {
+                font-size: 1rem;
+                padding: 8px 20px;
+            }
+            .info-box h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        button, .btn-like {
+            background: none;
+            border: none;
+        }
+
+        i.fa, i.far, i.fas {
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero-header">
+    <div class="image-strip">
+        <!-- using placeholder images but will reference local folder: c:\aryaf\ 
+             we embed images with src from that folder; also provide fallback fontawesome icons if not found -->
+        <img src="c:/aryaf/lodge1.jpg" alt="لوج ارياف" onerror="this.onerror=null; this.src='https://placehold.co/600x400/6b8e3e/white?text=لوج+ارياف';">
+        <img src="c:/aryaf/farm.jpg" alt="مزرعة فراولة" onerror="this.onerror=null; this.src='https://placehold.co/600x400/8B5A2B/white?text=مزرعة+التوت';">
+        <img src="c:/aryaf/mountain.jpg" alt="الجبال والخضرة" onerror="this.onerror=null; this.src='https://placehold.co/600x400/4c7a34/white?text=طبيعة+طبب';">
+        <img src="c:/aryaf/castle.jpg" alt="قلعة تاريخية" onerror="this.onerror=null; this.src='https://placehold.co/600x400/b57c48/white?text=قلعة+طامي';">
+    </div>
+</div>
+
+<div class="container">
+    <!-- التاريخ والوقت بشكل أنيق -->
+    <div class="datetime-card" id="dateTimeWidget">
+        <i class="fas fa-calendar-alt"></i> <span id="currentDate"></span> &nbsp;|&nbsp; <i class="fas fa-clock"></i> <span id="currentTime"></span>
+    </div>
+
+    <!-- معلومات عامة عن المزرعة والموقع -->
+    <div class="info-box">
+        <h2><i class="fas fa-tree"></i> أهلاً بكم في أرياف لودج والمزرعة</h2>
+        <p>تقع مزرعتنا في منطقة <strong>طبب</strong> شمال شرق أبها بحوالي 28 كم، في أحضان الطبيعة الخلابة بعيداً عن صخب المدينة. نتمتع بموقع هادئ جداً يُطل على الجبال الخضراء والأودية الجارية بالمياه، حيث يمكنكم الاسترخاء والاستمتاع بالمناظر الطبيعية الساحرة. كما نُعتبر قريبين جداً من المعالم التاريخية العريقة، إذ تبعد عنا <strong>حصون وقلاع آل متحمي</strong> و<strong>قلعة الأمير طامي بن شعيب المتحمي</strong> حوالي 300 متر فقط، ويمكننا ترتيب زيارات مخفضة لهذه المواقع.</p>
+        <p><i class="fas fa-mountain"></i> أجواء هادئة، هواء نقي، ومسارات للمشي وسط الخضرة والمياه الجارية – ملاذ مثالي للعائلات ومحبي الريف.</p>
+    </div>
+
+    <!-- الأقسام الرئيسية الخمسة حسب الطلب -->
+    <div class="sections-grid">
+        
+        <!-- 1 - اللودج (شاليهات) -->
+        <div class="card">
+            <div class="card-img" style="background-image: linear-gradient(120deg, #74613e80, #2c4b1e80), url('https://placehold.co/800x500/846C38/white?text=لوج+ارياف+الداخلي'); background-blend-mode: overlay;"></div>
+            <div class="card-content">
+                <h3><i class="fas fa-home"></i> اللودج الخاص</h3>
+                <p>يتكون اللودج من <strong>طابقين</strong> بمواصفات فاخرة تضمن إقامة ممتعة: 3 غرف نوم واسعة، 3 حمامات حديثة، وصالة معيشة كبيرة مع مدفأة. نوفر لضيوفنا <strong>سلة إفطار يومية</strong> من منتجات المزرعة الطازجة (فراولة، توت، عسل، حليب طازج) مع إمكانية تجهيز المطبخ المتكامل لتحضير وجباتكم بأنفسكم. كما نقدم خدمة غسيل الملابس ولوازم الطبخ الأساسية، لتشعر وكأنك في منزلك الثاني.</p>
+                <ul>
+                    <li>شرفة تطل على المزرعة والجبال</li>
+                    <li>مكيفات وواي فاي مجاني</li>
+                    <li>باقة ترحيب من الفواكه الموسمية</li>
+                    <li>إمكانية الشواء في الحديقة الخاصة</li>
+                </ul>
+                <div class="badge"><i class="fas fa-star"></i> تجربة إقامة ريفية فاخرة</div>
+            </div>
+        </div>
+        
+        <!-- 2 - قطاف الفراولة والتوت الأسود -->
+        <div class="card">
+            <div class="card-img" style="background-image: linear-gradient(135deg, #a54d2e80, #5e792e80), url('https://placehold.co/800x500/C44C2C/white?text=قطاف+الفراولة'); background-blend-mode: overlay;"></div>
+            <div class="card-content">
+                <h3><i class="fas fa-strawberry"></i> الفراولة والتوت الأسود</h3>
+                <p>يُسمح لضيوف المزرعة بقطاف كمية يومية من <strong>الفراولة العضوية</strong> و<strong>التوت الأسود</strong> الطازج ضمن برنامج الضيافة. لدينا حقول ممتدة بأصناف فريدة ذات نكهة مميزة، يمكنك قطفها بنفسك والاستمتاع بطعم الطبيعة. نقدم أيضاً حاويات مخصصة لتخزين الثمار.</p>
+                <p><i class="fas fa-leaf"></i> نصيحة: أفضل أوقات القطاف في الصباح الباكر. احصل على سلة مجانية مع كل حجز.</p>
+                <div class="badge"><i class="fas fa-hand-peace"></i> قطف يومي مجاني للضيوف</div>
+            </div>
+        </div>
+        
+        <!-- 3 - بساتين الفاكهة المتنوعة -->
+        <div class="card">
+            <div class="card-img" style="background-image: linear-gradient(145deg, #4f772d80, #cf9f4a80), url('https://placehold.co/800x500/CF9F4A/white?text=بساتين+الفاكهة'); background-blend-mode: overlay;"></div>
+            <div class="card-content">
+                <h3><i class="fas fa-apple-alt"></i> بساتين الفاكهة</h3>
+                <p>حدائقنا تضم أشجار مثمرة متنوعة: <strong>تفاح، برتقال، رمان، تين، عنب، كمثرى، مشمش، خوخ</strong> وأنواع أخرى موسمية. مرحباً بك لقطف الفواكه والاستمتاع بطعم الحصاد الطازج. ننظم جولات إرشادية للتعرف على الزراعة العضوية، ويمكن للزوار شراء منتجات إضافية من المزرعة (مربيات، عصائر طبيعية).</p>
+                <ul>
+                    <li>موسم الرمان والعنب في الخريف</li>
+                    <li>أشجار معمرة ومثمرة بطريقة طبيعية</li>
+                    <li>منطقة نزهة بين الأشجار</li>
+                </ul>
+                <div class="badge"><i class="fas fa-seedling"></i> حصاد مفتوح وفرحة العائلة</div>
+            </div>
+        </div>
+        
+        <!-- 4 - المشي والوادي الخلاب (مسارات الهايكينج) -->
+        <div class="card">
+            <div class="card-img" style="background-image: linear-gradient(125deg, #2f6b47b3, #aa8e54b3), url('https://placehold.co/800x500/558B2F/white?text=وادي+طبب'); background-blend-mode: overlay;"></div>
+            <div class="card-content">
+                <h3><i class="fas fa-hiking"></i> مسارات الوادي والجبال</h3>
+                <p>يمتاز موقعنا بوجود <strong>وادٍ خلاب</strong> بمياه جارية ومسارات مشي وسط الطبيعة. يمكنك استكشاف درب الهايكينج المميز الذي يمتد بين الصخور والخضرة، والاستمتاع بنسمات عليلة ومناظر بانورامية للجبال المحيطة. المكان آمن ومناسب لجميع الأعمار، ويوجد مناطق ظل ومقاعد خشبية للاسترخاء.</p>
+                <p>ننصح بجولة عند شروق الشمس أو قبل الغروب لالتقاط أجمل الصور. <i class="fas fa-camera"></i></p>
+                <div class="badge"><i class="fas fa-water"></i> شلالات صغيرة وجداول عذبة</div>
+            </div>
+        </div>
+        
+        <!-- 5 - المواقع التاريخية (قلاع وحصون) مع خصومات -->
+        <div class="card">
+            <div class="card-img" style="background-image: linear-gradient(140deg, #7a5b37cc, #a77539cc), url('https://placehold.co/800x500/A87B3E/white?text=قلعة+طامي+بن+شعيب'); background-blend-mode: overlay;"></div>
+            <div class="card-content">
+                <h3><i class="fas fa-landmark"></i> معالم تاريخية قريبة</h3>
+                <p>على بعد <strong>300 متر فقط</strong> من المزرعة تقع قلعة الأمير طامي بن شعيب المتحمي وحصون آل متحمي التاريخية (قلاع ومتحف مفتوح). نقدم لضيوفنا <strong>خصم خاص</strong> على تذاكر الدخول إلى هذه المواقع الأثرية العريقة التي تعود لمئات السنين، بجانب إمكانية توفير مرشد محلي للتعريف بالتاريخ العريق لمنطقة عسير.</p>
+                <p>استمتع بزيارة القلاع المبنية من الحجر والطين، وإطلالتها المهيبة على الوديان. ننسق لكم الرحلات القصيرة سيراً على الأقدام أو بالسيارة.</p>
+                <div class="badge"><i class="fas fa-ticket-alt"></i> خصم 20% لضيوف أرياف لودج</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- قسم إضافي من الخيال: نشاطات مميزة وأجواء خاصة -->
+    <div class="info-box" style="background: #ebf0e0; text-align: center;">
+        <h2><i class="fas fa-moon"></i> تجارب لا تنسى في أرياف</h2>
+        <p>✅ جلسات سمر حول النار في الليالي المقمرة  ✅ ركوب الخيل والتجول بين المزارع ✅ ورش عمل حرفية (صنع المربى والعصائر) ✅ جلسات تصوير فوتوغرافي مع مناظر الجبال. نرحب بالحفلات الصغيرة والتجمعات العائلية مع توفير بوفيه مزرعة طازج.</p>
+    </div>
+</div>
+
+<!-- تذييل الصفحة -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h4><i class="fas fa-phone-alt"></i> تواصل معنا</h4>
+            <p><i class="fas fa-mobile-alt"></i> +966 5X XXX XXXX</p>
+            <p><i class="fas fa-envelope"></i> info@aryaf-lodge.com</p>
+            <p><i class="fab fa-instagram"></i> @aryaf_farm_lodge</p>
+        </div>
+        <div class="footer-col">
+            <h4><i class="fas fa-location-dot"></i> العنوان</h4>
+            <p>منطقة طبب - شمال شرق أبها 28 كم، بجوار حصون آل متحمي، المملكة العربية السعودية</p>
+            <p><i class="fas fa-clock"></i> استقبال الضيوف: على مدار اليوم – الحجز المسبق مطلوب</p>
+        </div>
+        <div class="footer-col">
+            <h4><i class="fas fa-share-alt"></i> وسائل التواصل</h4>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <p style="margin-top: 20px;"><i class="fas fa-calendar-check"></i> احجز عطلتك الآن واستمتع بخصومات القطاف والإقامة</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <i class="far fa-copyright"></i> 2025 أرياف لودج والمزرعة - جميع الحقوق محفوظة. استرخاء وسط الطبيعة الخلابة في طبب.
+    </div>
+</footer>
+
+<!-- نص برمجي لعرض التاريخ والوقت بشكل متجدد وجميل -->
+<script>
+    function updateDateTime() {
+        const now = new Date();
+        const optionsDate = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+        const formattedDate = now.toLocaleDateString('ar-SA', optionsDate);
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        let seconds = now.getSeconds();
+        const ampm = hours >= 12 ? 'مساءً' : 'صباحاً';
+        hours = hours % 12 || 12;
+        const formattedTime = `${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')} ${ampm}`;
+        
+        const dateElem = document.getElementById('currentDate');
+        const timeElem = document.getElementById('currentTime');
+        if(dateElem) dateElem.innerText = formattedDate;
+        if(timeElem) timeElem.innerText = formattedTime;
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+    
+    // إذا احتجت لأي تحسين إضافي لتجنب مشاكل الصور المحلية يمكن إضافة fallback شامل (مضاف مسبقاً)
+    // كما يمكن إضافة تأثيرات بسيطة
+    console.log("موقع أرياف لودج يعمل بكل سلاسة");
+</script>
+<!-- ملاحظة: الصور المستخدمة من المسار c:\aryaf\ سيتم عرضها في حال وجودها، وإلا سيتم عرض صور افتراضية توضيحية مع النص المناسب -->
+</body>
+</html>

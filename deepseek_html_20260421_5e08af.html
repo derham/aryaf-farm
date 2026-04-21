@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مزرعة و اكواخ ارياف | استرخاء وطبيعة في طبب</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(145deg, #fef9e6 0%, #fff5e8 100%);
+            color: #2c2a24;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+        /* ========= HEADER SECTION ========= */
+        .header-wrapper {
+            background: #1e3a1e;
+            padding: 15px 20px;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .header-content {
+            display: flex;
+            align-items: stretch;
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        /* Date/Time Column - Left side */
+        .datetime-column {
+            background: linear-gradient(135deg, #f5e6c4, #fff0da);
+            border-radius: 25px;
+            padding: 20px 25px;
+            min-width: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 1px solid #e8d5aa;
+        }
+        .date-box {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #5a3e1b;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #d4b87a;
+            width: 100%;
+        }
+        .date-box i {
+            color: #b87333;
+            margin-left: 10px;
+            font-size: 1.6rem;
+        }
+        .time-box {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #2c5e2a;
+            letter-spacing: 2px;
+        }
+        .time-box i {
+            color: #d49436;
+            margin-left: 12px;
+            font-size: 1.8rem;
+        }
+        /* Images Gallery - No borders, adjacent */
+        .images-gallery {
+            flex: 1;
+            display: flex;
+            gap: 0;
+            overflow: hidden;
+            border-radius: 25px;
+            background: #2f4b2f;
+        }
+        .images-gallery img {
+            flex: 1;
+            width: 0;
+            min-width: 0;
+            height: 200px;
+            object-fit: cover;
+            transition: all 0.4s ease;
+            filter: brightness(0.95);
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+        .images-gallery img:hover {
+            filter: brightness(1.05);
+            transform: scale(1.02);
+            z-index: 2;
+        }
+        /* Responsive header */
+        @media (max-width: 900px) {
+            .header-content {
+                flex-direction: column;
+            }
+            .datetime-column {
+                flex-direction: row;
+                justify-content: space-around;
+                gap: 20px;
+                min-width: auto;
+            }
+            .date-box {
+                border-bottom: none;
+                border-left: 2px solid #d4b87a;
+                padding-bottom: 0;
+                margin-bottom: 0;
+                padding-left: 15px;
+            }
+            .time-box {
+                font-size: 1.6rem;
+            }
+            .images-gallery img {
+                height: 150px;
+            }
+        }
+        @media (max-width: 600px) {
+            .images-gallery {
+                flex-wrap: wrap;
+            }
+            .images-gallery img {
+                width: 50%;
+                height: 120px;
+            }
+        }
+        /* Info Box */
+        .info-box {
+            background: #ffffffdd;
+            background: linear-gradient(105deg, #ffffff 0%, #fef7e8 100%);
+            padding: 28px 30px;
+            border-radius: 48px;
+            margin: 35px 0 45px 0;
+            box-shadow: 0 12px 25px rgba(0,0,0,0.05);
+            border-right: 8px solid #7a9e3e;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        .info-box h2 {
+            color: #3c6b2f;
+            font-weight: 800;
+            margin-bottom: 18px;
+            font-size: 1.9rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        /* Sections Grid */
+        .sections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 35px;
+            margin: 50px 0;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 40px;
+            overflow: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f0e2c5;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 35px rgba(90, 60, 30, 0.15);
+        }
+        .card-img {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .card-content {
+            padding: 25px 22px 30px;
+        }
+        .card-content h3 {
+            font-size: 1.9rem;
+            color: #2c5e2a;
+            margin-bottom: 16px;
+            font-weight: 800;
+            border-right: 6px solid #e0b354;
+            padding-right: 15px;
+        }
+        .card-content p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #3e3a30;
+            margin-bottom: 15px;
+        }
+        .card-content ul {
+            padding-right: 20px;
+            margin: 15px 0;
+        }
+        .card-content li {
+            margin: 8px 0;
+        }
+        .badge {
+            background: #f5e2b2;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #6b4c1c;
+            margin-top: 10px;
+        }
+        /* Footer */
+        .footer {
+            background: #1e3a1e;
+            color: #fef2da;
+            border-radius: 45px 45px 0 0;
+            padding: 45px 20px 30px;
+            margin-top: 55px;
+        }
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 35px;
+            max-width: 1300px;
+            margin: auto;
+        }
+        .footer-col {
+            flex: 1;
+            min-width: 200px;
+        }
+        .footer-col h4 {
+            font-size: 1.5rem;
+            margin-bottom: 18px;
+            border-right: 3px solid #f6bc5c;
+            padding-right: 12px;
+        }
+        .footer-col p, .footer-col a {
+            color: #f0e2bf;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 12px 0;
+        }
+        .footer-col a:hover {
+            color: #ffdd99;
+        }
+        .social-icons {
+            display: flex;
+            gap: 18px;
+            margin-top: 15px;
+        }
+        .social-icons a {
+            background: #f5bc70;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #1e3a1e;
+            font-size: 1.6rem;
+            transition: 0.2s;
+        }
+        .social-icons a:hover {
+            background: #ffdd99;
+            transform: scale(1.05);
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 1px dashed #f0c674;
+        }
+        
+        /* Logo/Brand Name in header */
+        .brand-name {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #f5e2b2;
+            margin-top: 8px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        
+        @media (max-width: 900px) {
+            .brand-name {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="header-wrapper">
+    <div class="header-content">
+        <!-- Column 1: Date & Time (2 rows) -->
+        <div class="datetime-column">
+            <div class="date-box">
+                <i class="fas fa-calendar-alt"></i>
+                <span id="currentDate">جاري التحميل...</span>
+            </div>
+            <div class="time-box">
+                <i class="fas fa-clock"></i>
+                <span id="currentTime">--:--:--</span>
+            </div>
+            <div class="brand-name">
+                <i class="fas fa-tree"></i> مزرعة و اكواخ ارياف
+            </div>
+        </div>
+        
+        <!-- Column 2: Adjacent Images (no borders, no cards) -->
+        <div class="images-gallery">
+            <img src="lodge-view.jpg" alt="اكواخ ارياف">
+            <img src="lodge2.jpeg" alt="اكواخ ارياف">
+            <img src="lodge3.jpeg" alt="مزرعة ارياف">
+            <img src="strawberries.jpeg" alt="فراولة ارياف">
+            <img src="mountain-view.jpeg" alt="طبيعة ارياف">
+            <img src="castle-view.jpg" alt="قلعة تاريخية">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <!-- General Info -->
+    <div class="info-box">
+        <h2><i class="fas fa-tree"></i> مرحباً بكم في مزرعة و اكواخ ارياف</h2>
+        <p>تقع <strong>مزرعة و اكواخ ارياف</strong> في منطقة <strong>طبب</strong> شمال شرق أبها بحوالي 28 كم، في أحضان الطبيعة الخلابة بعيداً عن صخب المدينة. نتمتع بموقع هادئ جداً يُطل على الجبال الخضراء والأودية الجارية بالمياه، حيث يمكنكم الاسترخاء والاستمتاع بالمناظر الطبيعية الساحرة. كما نُعتبر قريبين جداً من المعالم التاريخية العريقة، إذ تبعد عنا <strong>حصون وقلاع آل متحمي</strong> و<strong>قلعة الأمير طامي بن شعيب المتحمي</strong> حوالي 300 متر فقط، ويمكننا ترتيب زيارات مخفضة لهذه المواقع.</p>
+        <p><i class="fas fa-mountain"></i> أجواء هادئة، هواء نقي، ومسارات للمشي وسط الخضرة والمياه الجارية – ملاذ مثالي للعائلات ومحبي الريف.</p>
+    </div>
+    <!-- 5 Sections -->
+    <div class="sections-grid">
+        <!-- Lodge -->
+        <div class="card">
+            <div class="card-img" style="background-image: linear-gradient(120deg, #74613e80, #2c4b1e80), url('lodge-view.jpg'); background-blend-mode: overlay; background-size: cover;"></div>
+            <div class="card-content">
+                <h3><i class="fas fa-home"></i> الاكواخ الخاصة</h3>
+                <p>تتكون الاكواخ من <strong>طابقين</strong> بمواصفات فاخرة: 3 غرف نوم واسعة، 3 حمامات حديثة، وصالة معيشة كبيرة. نوفر <strong>سلة إفطار يومية</strong> من منتجات المزرعة الطازجة (فراولة، توت، عسل) مع مطبخ متكامل للطهي. كما نقدم خدمة غسيل ولوازم الطبخ الأساسية.</p>
+                <ul>
+                    <li>شرفة تطل على المزرعة والجبال</li>
+                    <li>مكيفات وواي فاي مجاني</li>
+                    <li>باقة ترحيب من الفواكه الموسمية</li>
+                    <li>سلة إفطار يومية مجانية</li>
+                </ul>
+                <div class="badge"><i class="fas fa-star"></i> إقامة ريفية فاخرة</div>
+            </div>
+        </div>
+        
+        <!-- Strawberries & Blackberries -->
+        <div class="card">
+            <div class="card-img" style="background-image: linear-gradient(135deg, #a54d2e80, #5e792e80), url('strawberries.jpeg'); background-blend-mode: overlay; background-size: cover;"></div>
+            <div class="card-content">
+                <h3><i class="fas fa-strawberry"></i> الفراولة والتوت الأسود</h3>
+                <p>يُسمح لضيوف <strong>مزرعة و اكواخ ارياف</strong> بقطاف كمية يومية من <strong>الفراولة العضوية</strong> و<strong>التوت الأسود</strong> الطازج. لدينا حقول ممتدة بأصناف فريدة، يمكنك قطفها بنفسك والاستمتاع بطعم الطبيعة النقية.</p>
+                <p><i class="fas fa-leaf"></i> سلة قطاف مجانية مقدمة من المزرعة لكل ضيف.</p>
+                <div class="badge"><i class="fas fa-hand-peace"></i> قطاف يومي مجاني للضيوف</div>
+            </div>
+        </div>
+        
+        <!-- Fruit Orchards -->
+        <div class="card">
+            <div class="card-img" style="background-image: linear-gradient(145deg, #4f772d80, #cf9f4a80), url('mountain-view.jpeg'); background-blend-mode: overlay; background-size: cover;"></div>
+            <div class="card-content">
+                <h3><i class="fas fa-apple-alt"></i> بساتين الفاكهة المتنوعة</h3>
+                <p>حدائقنا تضم أشجار مثمرة متنوعة: <strong>تفاح، برتقال، رمان، تين، عنب، كمثرى، مشمش، خوخ</strong> وأنواع أخرى موسمية. مرحباً بك لقطف الفواكه والاستمتاع بطعم الحصاد الطازج مباشرة من الأشجار.</p>
+                <ul>
+                    <li>أشجار عضوية معمرة</li>
+                    <li>مناطق نزهة بين البساتين</li>
+                    <li>إمكانية شراء المنتجات الطازجة</li>
+                </ul>
+                <div class="badge"><i class="fas fa-seedling"></i> حصاد مفتوح للعائلة</div>
+            </div>
+        </div>
+        
+        <!-- Hiking & Valley -->
+        <div class="card">
+            <div class="card-img" style="background-image: linear-gradient(125deg, #2f6b47b3, #aa8e54b3), url('canyon-view.jpeg'); background-blend-mode: overlay; background-size: cover;"></div>
+            <div class="card-content">
+                <h3><i class="fas fa-hiking"></i> مسارات الوادي والجبال</h3>
+                <p>يوجد <strong>وادٍ خلاب</strong> بمياه جارية ومسارات مشي رائعة وسط الطبيعة. يمكنك استكشاف درب الهايكينج الممتد بين الصخور والخضرة، والاستمتاع بمناظر بانورامية خلابة للجبال المحيطة.</p>
+                <p><i class="fas fa-camera"></i> أماكن مخصصة للجلوس والتصوير الفوتوغرافي.</p>
+                <div class="badge"><i class="fas fa-water"></i> جداول عذبة ومناظر ساحرة</div>
+            </div>
+        </div>
+        
+        <!-- Historical Sites -->
+        <div class="card">
+            <div class="card-img" style="background-image: linear-gradient(140deg, #7a5b37cc, #a77539cc), url('castle-view.jpg'); background-blend-mode: overlay; background-size: cover;"></div>
+            <div class="card-content">
+                <h3><i class="fas fa-landmark"></i> المعالم التاريخية القريبة</h3>
+                <p>على بعد <strong>300 متر فقط</strong> من مزرعتنا تقع <strong>قلعة الأمير طامي بن شعيب المتحمي</strong> و<strong>حصون وآثار آل متحمي</strong> التاريخية. نقدم لضيوفنا <strong>خصم خاص</strong> على تذاكر الدخول إلى هذه المواقع الأثرية العريقة التي تعود لمئات السنين.</p>
+                <p>يمكننا توفير مرشد سياحي محلي للتعريف بتاريخ المنطقة العريق.</p>
+                <div class="badge"><i class="fas fa-ticket-alt"></i> خصم 20% لضيوف مزرعة و اكواخ ارياف</div>
+            </div>
+        </div>
+    </div>
+    <!-- Extra Activity -->
+    <div class="info-box" style="background: #ebf0e0; text-align: center;">
+        <h2><i class="fas fa-moon"></i> تجارب لا تنسى في مزرعة و اكواخ ارياف</h2>
+        <p>✅ جلسات سمر حول النار في الليالي المقمرة ✅ ركوب الخيل والتجول بين المزارع ✅ ورش عمل حرفية (صنع المربى والعصائر الطبيعية) ✅ جلسات تصوير فوتوغرافي مع مناظر الجبال والوديان ✅ ألعاب أطفال ومناطق مخصصة للعائلات.</p>
+    </div>
+</div>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h4><i class="fas fa-phone-alt"></i> تواصل معنا</h4>
+            <p><i class="fas fa-mobile-alt"></i> +966 50 123 4567</p>
+            <p><i class="fas fa-envelope"></i> info@aryaf-farm.com</p>
+            <p><i class="fab fa-instagram"></i> @aryaf_farm_lodge</p>
+            <p><i class="fab fa-whatsapp"></i> +966 50 123 4567 (واتساب)</p>
+        </div>
+        <div class="footer-col">
+            <h4><i class="fas fa-location-dot"></i> العنوان</h4>
+            <p>منطقة طبب - شمال شرق أبها 28 كم</p>
+            <p>بجوار حصون وقلاع آل متحمي</p>
+            <p>المملكة العربية السعودية</p>
+            <p><i class="fas fa-clock"></i> الحجز المسبق مطلوب – استقبال 24 ساعة</p>
+        </div>
+        <div class="footer-col">
+            <h4><i class="fas fa-share-alt"></i> تابعونا على وسائل التواصل</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p style="margin-top: 20px;"><i class="fas fa-calendar-check"></i> احجز عطلتك الآن واستمتع بخصومات القطاف والإقامة</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <i class="far fa-copyright"></i> 2025 مزرعة و اكواخ ارياف - جميع الحقوق محفوظة. استرخاء وسط الطبيعة الخلابة في طبب.
+    </div>
+</footer>
+<script>
+    function updateDateTime() {
+        const now = new Date();
+        const optionsDate = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+        const formattedDate = now.toLocaleDateString('ar-SA', optionsDate);
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        let seconds = now.getSeconds();
+        const ampm = hours >= 12 ? 'مساءً' : 'صباحاً';
+        hours = hours % 12 || 12;
+        const formattedTime = `${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')} ${ampm}`;
+        
+        document.getElementById('currentDate').innerText = formattedDate;
+        document.getElementById('currentTime').innerText = formattedTime;
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+</script>
+</body>
+</html>
+
+review and enhance this html page to a level where it attract visitors

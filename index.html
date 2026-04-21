@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مزرعة و اكواخ ارياف في طبب شمال شرق أبها - إقامة ريفية فاخرة، قطاف فراولة وتوت، بساتين فاكهة، ومسارات هايكينج وسط الطبيعة الخلابة بجوار قلاع آل متحمي التاريخية.">
+    <meta name="keywords" content="مزرعة ارياف, اكواخ ارياف, طبب, أبها, عسير, سياحة ريفية, اكواخ أبها, قطاف فراولة, قلعة آل متحمي, هايكينج أبها">
+    <meta property="og:title" content="مزرعة و اكواخ ارياف | استرخاء وطبيعة في طبب">
+    <meta property="og:description" content="إقامة ريفية فاخرة بين الجبال والبساتين في طبب - أبها">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#2d5016">
+    <title>مزرعة و اكواخ ارياف | استرخاء وطبيعة في طبب - أبها</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============ RESET & TOKENS ============ */
+        :root{
+            --green-900:#15331a;
+            --green-800:#1e4523;
+            --green-700:#2d5f2e;
+            --green-600:#3e7a3d;
+            --green-500:#568a4a;
+            --green-300:#a8c48c;
+            --cream-50:#fefaf0;
+            --cream-100:#fbf3e0;
+            --cream-200:#f5e6c4;
+            --sand-300:#e8d5aa;
+            --gold-500:#d4a04a;
+            --gold-600:#b87f2c;
+            --amber-700:#8c5a1e;
+            --ink-900:#26231c;
+            --ink-700:#4a4539;
+            --ink-500:#746e5f;
+            --white:#ffffff;
+            --shadow-sm:0 2px 8px rgba(37,32,20,.06);
+            --shadow-md:0 10px 25px rgba(37,32,20,.08);
+            --shadow-lg:0 25px 50px rgba(37,32,20,.14);
+            --radius-lg:28px;
+            --radius-xl:40px;
+        }
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth;scroll-padding-top:90px}
+        body{
+            font-family:'Tajawal',sans-serif;
+            background:var(--cream-50);
+            color:var(--ink-900);
+            line-height:1.7;
+            overflow-x:hidden;
+        }
+        img{max-width:100%;display:block}
+        a{text-decoration:none;color:inherit}
+        button{font-family:inherit;cursor:pointer;border:none;background:none}
+
+        /* Decorative SVG background pattern */
+        body::before{
+            content:"";
+            position:fixed;inset:0;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(212,160,74,.05) 0, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(45,95,46,.05) 0, transparent 40%);
+            pointer-events:none;
+            z-index:-1;
+        }
+
+        .container{max-width:1320px;margin:0 auto;padding:0 24px}
+
+        /* ============ TOP BAR (sticky) ============ */
+        .topbar{
+            position:fixed;top:0;left:0;right:0;z-index:100;
+            background:rgba(30,69,35,.92);
+            backdrop-filter:blur(14px);
+            -webkit-backdrop-filter:blur(14px);
+            border-bottom:1px solid rgba(255,255,255,.08);
+            transition:all .35s ease;
+        }
+        .topbar-inner{
+            max-width:1320px;margin:0 auto;padding:14px 24px;
+            display:flex;align-items:center;justify-content:space-between;gap:20px;
+            direction:rtl;
+        }
+        .nav-start{display:flex;align-items:center;gap:30px}
+        .nav-end{display:flex;align-items:center;gap:10px}
+        .brand{
+            display:flex;align-items:center;gap:12px;color:var(--cream-100);
+        }
+        .brand-icon{
+            width:44px;height:44px;border-radius:14px;
+            background:linear-gradient(135deg,var(--gold-500),var(--gold-600));
+            display:grid;place-items:center;
+            color:var(--green-900);font-size:1.3rem;
+            box-shadow:0 4px 15px rgba(212,160,74,.35);
+        }
+        .brand-text{display:flex;flex-direction:column;line-height:1.15}
+        .brand-title{font-weight:800;font-size:1.2rem;color:var(--cream-100)}
+        .brand-sub{font-size:.78rem;color:var(--gold-500);letter-spacing:.5px}
+
+        .nav-links{display:flex;gap:4px;align-items:center;direction:rtl}
+        .nav-links a{
+            color:var(--cream-100);padding:9px 14px;border-radius:12px;
+            font-weight:500;font-size:.95rem;transition:all .25s;
+            position:relative;
+        }
+        .nav-links a::after{
+            content:"";position:absolute;bottom:4px;right:14px;
+            width:0;height:2px;background:var(--gold-500);
+            transition:width .35s ease;border-radius:2px;
+        }
+        .nav-links a:hover{color:var(--gold-500);background:rgba(255,255,255,.04)}
+        .nav-links a:hover::after{width:calc(100% - 28px)}
+        .nav-cta{
+            display:inline-flex;align-items:center;gap:8px;
+            background:linear-gradient(135deg,var(--gold-500),var(--gold-600));
+            color:var(--green-900);font-weight:700;
+            padding:10px 20px;border-radius:12px;
+            font-size:.95rem;
+            box-shadow:0 4px 15px rgba(212,160,74,.35);
+            transition:all .25s;
+        }
+        .nav-cta:hover{transform:translateY(-2px);background:var(--gold-500)}
+
+        .menu-toggle{display:none;color:var(--cream-100);font-size:1.6rem;padding:6px 10px;background:rgba(255,255,255,.08);border-radius:12px;transition:.2s}
+        .menu-toggle:hover{background:rgba(255,255,255,.15);color:var(--gold-500)}
+
+        @media(max-width:960px){
+            .nav-links{
+                position:fixed;top:70px;left:0;right:0;
+                flex-direction:column;
+                background:var(--green-800);
+                padding:20px;gap:6px;
+                transform:translateY(-120%);opacity:0;pointer-events:none;
+                transition:all .35s ease;
+                border-bottom:3px solid var(--gold-500);
+                direction:rtl;text-align:right;
+            }
+            .nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto}
+            .nav-links a{width:100%;text-align:right;padding:12px 18px}
+            .nav-links a::after{display:none}
+            .menu-toggle{display:grid;place-items:center;width:42px;height:42px;padding:0}
+            .nav-start{gap:14px}
+            .nav-cta{display:none}
+        }
+        @media(max-width:520px){
+            .brand-sub{display:none}
+        }
+
+        /* ============ HERO ============ */
+        .hero{
+            position:relative;height:100vh;min-height:640px;
+            overflow:hidden;color:#fff;
+            display:flex;align-items:flex-end;justify-content:center;text-align:center;
+            margin-top:72px;
+            padding:0 20px 110px;
+        }
+        .hero-slides{position:absolute;inset:0;z-index:0}
+        .hero-slide{
+            position:absolute;inset:0;
+            background-size:cover;background-position:center;
+            opacity:0;transition:opacity 1.5s ease-in-out;
+            transform:scale(1.08);
+        }
+        .hero-slide.active{opacity:1;animation:kenburns 9s ease-out forwards}
+        @keyframes kenburns{
+            from{transform:scale(1.0)}
+            to{transform:scale(1.12)}
+        }
+        .hero-overlay{
+            position:absolute;inset:0;
+            background:
+                linear-gradient(180deg, rgba(21,51,26,.15) 0%, rgba(21,51,26,.05) 35%, rgba(21,51,26,.55) 70%, rgba(21,51,26,.92) 100%);
+            z-index:1;
+        }
+        .hero-content{
+            position:relative;z-index:2;max-width:900px;padding:0 24px;
+            animation:fadeUp 1.2s ease-out both;
+        }
+        .hero-eyebrow{
+            display:inline-flex;align-items:center;gap:10px;
+            background:rgba(212,160,74,.18);
+            border:1px solid rgba(212,160,74,.55);
+            color:var(--gold-500);
+            padding:8px 18px;border-radius:99px;
+            font-weight:700;font-size:.9rem;margin-bottom:22px;
+            backdrop-filter:blur(8px);
+        }
+        .hero h1{
+            font-family:'Tajawal',sans-serif;
+            font-size:clamp(2.2rem,5.5vw,4.4rem);
+            font-weight:900;line-height:1.15;
+            margin-bottom:20px;
+            text-shadow:0 4px 30px rgba(0,0,0,.4);
+        }
+        .hero h1 .accent{color:var(--gold-500);display:inline-block}
+        .hero-sub{
+            font-size:clamp(1rem,2vw,1.35rem);
+            max-width:720px;margin:0 auto 32px;
+            color:#f5ede0;
+            text-shadow:0 2px 15px rgba(0,0,0,.5);
+        }
+        .hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+        .btn{
+            display:inline-flex;align-items:center;gap:10px;
+            padding:14px 28px;border-radius:99px;
+            font-weight:700;font-size:1rem;
+            transition:all .3s;cursor:pointer;
+            border:2px solid transparent;
+        }
+        .btn-primary{
+            background:linear-gradient(135deg,var(--gold-500),var(--gold-600));
+            color:var(--green-900);
+            box-shadow:0 10px 30px rgba(212,160,74,.45);
+        }
+        .btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(212,160,74,.55)}
+        .btn-ghost{
+            background:rgba(255,255,255,.1);
+            color:#fff;border-color:rgba(255,255,255,.4);
+            backdrop-filter:blur(8px);
+        }
+        .btn-ghost:hover{background:rgba(255,255,255,.22);transform:translateY(-3px)}
+
+        .hero-scroll{
+            position:absolute;bottom:30px;left:50%;transform:translateX(-50%);
+            color:#fff;z-index:2;text-align:center;
+            animation:bounce 2s ease-in-out infinite;
+        }
+        .hero-scroll i{font-size:1.4rem;display:block;margin-top:6px;color:var(--gold-500)}
+        @keyframes bounce{
+            0%,100%{transform:translate(-50%,0)}
+            50%{transform:translate(-50%,12px)}
+        }
+
+        /* Floating datetime - top-right for RTL */
+        .hero-datetime{
+            position:absolute;top:24px;right:24px;z-index:3;
+            background:rgba(30,69,35,.55);
+            backdrop-filter:blur(14px);
+            border:1px solid rgba(255,255,255,.15);
+            border-radius:22px;
+            padding:14px 20px;color:#fff;
+            min-width:200px;text-align:center;
+        }
+        .hero-datetime .date{font-size:.85rem;color:var(--gold-500);font-weight:700;margin-bottom:4px}
+        .hero-datetime .time{font-size:1.5rem;font-weight:800;letter-spacing:1.5px}
+        @media(max-width:640px){.hero-datetime{top:14px;right:14px;padding:10px 14px;min-width:150px}.hero-datetime .time{font-size:1.1rem}}
+
+        @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+        /* ============ STATS STRIP ============ */
+        .stats-strip{
+            background:linear-gradient(135deg,var(--green-800),var(--green-700));
+            color:#fff;padding:50px 24px;
+            margin-top:-1px;
+            position:relative;
+        }
+        .stats-strip::before{
+            content:"";position:absolute;top:0;left:0;right:0;height:40px;
+            background:inherit;
+            clip-path:polygon(0 100%, 100% 100%, 100% 0, 0 50%);
+            transform:translateY(-40px);
+        }
+        .stats-grid{
+            max-width:1100px;margin:0 auto;
+            display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+        }
+        .stat{text-align:center;padding:10px}
+        .stat-num{
+            font-size:clamp(2rem,4vw,3.2rem);font-weight:900;
+            color:var(--gold-500);line-height:1;
+            display:block;margin-bottom:6px;
+        }
+        .stat-label{font-size:.95rem;color:#e8dfc9;font-weight:500}
+        .stat i{font-size:1.4rem;margin-bottom:8px;opacity:.8}
+        @media(max-width:640px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:24px}}
+
+        /* ============ SECTION BASE ============ */
+        section{padding:90px 0;position:relative}
+        .section-head{text-align:center;max-width:720px;margin:0 auto 55px}
+        .section-kicker{
+            display:inline-block;padding:6px 16px;
+            background:var(--cream-200);color:var(--amber-700);
+            border-radius:99px;font-size:.85rem;font-weight:700;
+            margin-bottom:14px;letter-spacing:.5px;
+        }
+        .section-title{
+            font-size:clamp(1.8rem,3.6vw,2.8rem);
+            font-weight:800;color:var(--green-800);
+            margin-bottom:14px;line-height:1.2;
+        }
+        .section-title .accent{color:var(--gold-600)}
+        .section-lead{color:var(--ink-700);font-size:1.08rem}
+
+        /* Decorative divider */
+        .divider{
+            display:flex;align-items:center;justify-content:center;gap:10px;margin:14px auto 0;
+        }
+        .divider::before,.divider::after{
+            content:"";flex:0 0 40px;height:2px;
+            background:linear-gradient(90deg,transparent,var(--gold-500));
+        }
+        .divider::after{background:linear-gradient(90deg,var(--gold-500),transparent)}
+        .divider i{color:var(--gold-500);font-size:1rem}
+
+        /* ============ ABOUT ============ */
+        #about{background:var(--white)}
+        .about-grid{
+            display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;
+        }
+        @media(max-width:960px){.about-grid{grid-template-columns:1fr;gap:40px}}
+        .about-text h2{
+            font-size:clamp(1.8rem,3.4vw,2.6rem);
+            color:var(--green-800);font-weight:800;
+            margin-bottom:20px;line-height:1.25;
+        }
+        .about-text h2 .accent{color:var(--gold-600)}
+        .about-text p{color:var(--ink-700);margin-bottom:16px;font-size:1.05rem}
+        .about-highlights{
+            margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:14px;
+        }
+        .hl{
+            display:flex;gap:12px;align-items:flex-start;
+            padding:14px;border-radius:16px;
+            background:var(--cream-50);
+            border:1px solid var(--cream-200);
+        }
+        .hl i{
+            width:40px;height:40px;border-radius:12px;
+            background:var(--green-700);color:var(--gold-500);
+            display:grid;place-items:center;flex-shrink:0;
+        }
+        .hl div{font-size:.92rem;font-weight:600;color:var(--ink-900)}
+        .hl span{display:block;font-size:.8rem;color:var(--ink-500);font-weight:400;margin-top:2px}
+
+        .about-visual{position:relative;padding:20px}
+        .about-visual .main-img{
+            width:100%;height:460px;
+            background:url('mountain-view.jpeg') center/cover;
+            border-radius:var(--radius-xl);
+            box-shadow:var(--shadow-lg);
+        }
+        .about-visual .stamp{
+            position:absolute;bottom:-10px;right:-10px;
+            background:var(--gold-500);color:var(--green-900);
+            width:160px;height:160px;border-radius:50%;
+            display:grid;place-items:center;text-align:center;
+            font-weight:900;padding:20px;line-height:1.2;
+            box-shadow:0 15px 40px rgba(212,160,74,.45);
+            animation:spinSlow 25s linear infinite;
+            font-size:.9rem;
+        }
+        @keyframes spinSlow{to{transform:rotate(360deg)}}
+        .about-visual .stamp span{font-size:1.8rem;display:block;margin-bottom:4px}
+
+        /* ============ FEATURES GRID ============ */
+        #features{background:var(--cream-50)}
+        .features-grid{
+            display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+            gap:22px;
+        }
+        .feature{
+            background:var(--white);padding:30px 24px;
+            border-radius:var(--radius-lg);
+            border:1px solid var(--cream-200);
+            transition:all .35s;
+            text-align:center;
+        }
+        .feature:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:var(--gold-500)}
+        .feature-icon{
+            width:64px;height:64px;border-radius:20px;
+            background:linear-gradient(135deg,var(--green-700),var(--green-600));
+            color:var(--gold-500);
+            display:grid;place-items:center;
+            font-size:1.6rem;margin:0 auto 16px;
+            box-shadow:0 8px 20px rgba(45,95,46,.25);
+        }
+        .feature h4{font-size:1.15rem;font-weight:800;color:var(--green-800);margin-bottom:8px}
+        .feature p{color:var(--ink-500);font-size:.95rem;line-height:1.6}
+
+        /* ============ EXPERIENCES (upgraded cards) ============ */
+        #experiences{
+            background:linear-gradient(180deg,var(--cream-50) 0%, var(--white) 100%);
+        }
+        .exp-grid{
+            display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+            gap:28px;
+        }
+        .exp-card{
+            background:var(--white);border-radius:var(--radius-lg);overflow:hidden;
+            box-shadow:var(--shadow-sm);border:1px solid var(--cream-200);
+            transition:all .4s;
+            display:flex;flex-direction:column;
+        }
+        .exp-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-lg)}
+        .exp-img{
+            position:relative;height:230px;overflow:hidden;
+        }
+        .exp-img::after{
+            content:"";position:absolute;inset:0;
+            background:linear-gradient(180deg,transparent 40%,rgba(21,51,26,.55));
+        }
+        .exp-img img{
+            width:100%;height:100%;object-fit:cover;
+            transition:transform .8s ease;
+        }
+        .exp-card:hover .exp-img img{transform:scale(1.12)}
+        .exp-tag{
+            position:absolute;top:16px;right:16px;z-index:2;
+            background:rgba(255,255,255,.95);
+            backdrop-filter:blur(8px);
+            color:var(--amber-700);padding:6px 14px;
+            border-radius:99px;font-size:.8rem;font-weight:700;
+        }
+        .exp-body{padding:26px;flex:1;display:flex;flex-direction:column}
+        .exp-body h3{
+            font-size:1.4rem;font-weight:800;color:var(--green-800);
+            margin-bottom:10px;display:flex;gap:10px;align-items:center;
+        }
+        .exp-body h3 i{color:var(--gold-600)}
+        .exp-body p{color:var(--ink-700);font-size:.98rem;margin-bottom:14px}
+        .exp-features{list-style:none;margin:0 0 18px;padding:0}
+        .exp-features li{
+            padding:6px 0;color:var(--ink-700);font-size:.92rem;
+            display:flex;align-items:center;gap:8px;
+        }
+        .exp-features li::before{
+            content:"\f00c";font-family:"Font Awesome 6 Free";font-weight:900;
+            color:var(--green-600);font-size:.8rem;
+        }
+        .exp-foot{
+            margin-top:auto;padding-top:18px;
+            border-top:1px dashed var(--cream-200);
+            display:flex;align-items:center;justify-content:space-between;gap:10px;
+        }
+        .exp-badge{
+            background:var(--cream-200);color:var(--amber-700);
+            padding:6px 14px;border-radius:99px;
+            font-size:.82rem;font-weight:700;
+        }
+
+        /* ============ GALLERY ============ */
+        #gallery{background:var(--cream-100)}
+        .gallery-grid{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            grid-auto-rows:180px;gap:14px;
+        }
+        .gallery-grid .gi{
+            overflow:hidden;border-radius:22px;cursor:pointer;
+            position:relative;
+            box-shadow:var(--shadow-sm);
+        }
+        .gallery-grid .gi img{
+            width:100%;height:100%;object-fit:cover;
+            transition:transform .6s ease;
+        }
+        .gallery-grid .gi::after{
+            content:"\f00e";font-family:"Font Awesome 6 Free";font-weight:900;
+            position:absolute;inset:0;
+            background:rgba(21,51,26,.0);color:transparent;
+            display:grid;place-items:center;font-size:1.8rem;
+            transition:all .35s;
+        }
+        .gallery-grid .gi:hover img{transform:scale(1.12)}
+        .gallery-grid .gi:hover::after{background:rgba(21,51,26,.55);color:var(--gold-500)}
+        .gallery-grid .gi.wide{grid-column:span 2}
+        .gallery-grid .gi.tall{grid-row:span 2}
+        @media(max-width:960px){
+            .gallery-grid{grid-template-columns:repeat(2,1fr)}
+            .gallery-grid .gi.wide{grid-column:span 2}
+            .gallery-grid .gi.tall{grid-row:span 1}
+        }
+
+        /* Lightbox */
+        .lightbox{
+            position:fixed;inset:0;z-index:1000;
+            background:rgba(10,20,10,.92);
+            display:none;align-items:center;justify-content:center;
+            backdrop-filter:blur(12px);
+            padding:20px;
+        }
+        .lightbox.open{display:flex;animation:fadeUp .3s ease}
+        .lightbox img{max-width:92vw;max-height:85vh;border-radius:18px;box-shadow:var(--shadow-lg)}
+        .lightbox .lb-close,.lightbox .lb-prev,.lightbox .lb-next{
+            position:absolute;background:rgba(255,255,255,.1);
+            color:#fff;width:48px;height:48px;border-radius:50%;
+            display:grid;place-items:center;font-size:1.2rem;
+            backdrop-filter:blur(10px);transition:.2s;
+            border:1px solid rgba(255,255,255,.2);
+        }
+        .lightbox .lb-close{top:20px;left:20px}
+        .lightbox .lb-prev{right:20px;top:50%;transform:translateY(-50%)}
+        .lightbox .lb-next{left:20px;top:50%;transform:translateY(-50%)}
+        .lightbox button:hover{background:var(--gold-500);color:var(--green-900)}
+
+        /* ============ PACKAGES ============ */
+        #packages{background:var(--white)}
+        .pkg-grid{
+            display:grid;grid-template-columns:repeat(3,1fr);gap:26px;
+        }
+        @media(max-width:900px){.pkg-grid{grid-template-columns:1fr;max-width:480px;margin:0 auto}}
+        .pkg{
+            background:var(--white);
+            border:2px solid var(--cream-200);
+            border-radius:var(--radius-lg);
+            padding:34px 28px;
+            text-align:center;
+            transition:all .35s;
+            position:relative;
+        }
+        .pkg:hover{transform:translateY(-8px);box-shadow:var(--shadow-md);border-color:var(--gold-500)}
+        .pkg.featured{
+            background:linear-gradient(175deg,var(--green-800),var(--green-700));
+            color:#fff;border-color:var(--gold-500);
+            transform:scale(1.04);
+        }
+        .pkg.featured:hover{transform:scale(1.04) translateY(-8px)}
+        .pkg-crown{
+            position:absolute;top:-16px;left:50%;transform:translateX(-50%);
+            background:linear-gradient(135deg,var(--gold-500),var(--gold-600));
+            color:var(--green-900);
+            padding:6px 20px;border-radius:99px;
+            font-size:.85rem;font-weight:800;
+            box-shadow:0 6px 18px rgba(212,160,74,.45);
+        }
+        .pkg h3{
+            font-size:1.4rem;font-weight:800;
+            color:var(--green-800);margin-bottom:10px;
+        }
+        .pkg.featured h3{color:#fff}
+        .pkg-price{
+            font-size:2.6rem;font-weight:900;color:var(--gold-600);
+            margin:14px 0 4px;line-height:1;
+        }
+        .pkg.featured .pkg-price{color:var(--gold-500)}
+        .pkg-price small{font-size:.9rem;color:var(--ink-500);font-weight:500}
+        .pkg.featured .pkg-price small{color:#d3d2c3}
+        .pkg-price .currency{font-size:1rem;color:var(--ink-500);margin-right:4px}
+        .pkg.featured .pkg-price .currency{color:#d3d2c3}
+        .pkg-list{list-style:none;padding:0;margin:22px 0;text-align:right}
+        .pkg-list li{
+            padding:9px 0;border-bottom:1px dashed rgba(0,0,0,.08);
+            display:flex;align-items:center;gap:10px;font-size:.95rem;
+            color:var(--ink-700);
+        }
+        .pkg.featured .pkg-list li{color:#e8dfc9;border-color:rgba(255,255,255,.08)}
+        .pkg-list li i{color:var(--green-600);font-size:.9rem}
+        .pkg.featured .pkg-list li i{color:var(--gold-500)}
+        .pkg-list li:last-child{border:none}
+        .pkg .btn{width:100%;justify-content:center}
+
+        /* ============ TESTIMONIALS ============ */
+        #testimonials{
+            background:linear-gradient(135deg,var(--green-900),var(--green-800));
+            color:#fff;position:relative;overflow:hidden;
+        }
+        #testimonials::before{
+            content:"\f10d";font-family:"Font Awesome 6 Free";font-weight:900;
+            position:absolute;top:20px;left:50%;transform:translateX(-50%);
+            font-size:260px;color:rgba(212,160,74,.06);pointer-events:none;
+        }
+        #testimonials .section-kicker{background:rgba(212,160,74,.2);color:var(--gold-500)}
+        #testimonials .section-title{color:#fff}
+        #testimonials .section-title .accent{color:var(--gold-500)}
+        #testimonials .section-lead{color:#d3d2c3}
+        .tstm-track{
+            display:flex;gap:24px;overflow:hidden;
+            padding:10px 4px;position:relative;z-index:2;
+        }
+        .tstm{
+            flex:0 0 calc(33.333% - 16px);
+            background:rgba(255,255,255,.06);
+            border:1px solid rgba(255,255,255,.1);
+            backdrop-filter:blur(12px);
+            border-radius:var(--radius-lg);
+            padding:28px;transition:transform .3s;
+        }
+        .tstm:hover{transform:translateY(-5px);background:rgba(255,255,255,.09)}
+        .tstm-stars{color:var(--gold-500);margin-bottom:12px}
+        .tstm-text{color:#ece5d2;font-size:1rem;line-height:1.8;margin-bottom:20px}
+        .tstm-author{display:flex;align-items:center;gap:12px}
+        .tstm-avatar{
+            width:48px;height:48px;border-radius:50%;
+            background:linear-gradient(135deg,var(--gold-500),var(--gold-600));
+            color:var(--green-900);display:grid;place-items:center;
+            font-weight:800;font-size:1.1rem;
+        }
+        .tstm-name{font-weight:700;color:#fff}
+        .tstm-role{font-size:.85rem;color:#d3d2c3}
+        @media(max-width:900px){.tstm{flex:0 0 calc(100% - 10px)}.tstm-track{overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:20px}.tstm{scroll-snap-align:start}.tstm-track::-webkit-scrollbar{height:6px}.tstm-track::-webkit-scrollbar-thumb{background:var(--gold-500);border-radius:3px}}
+
+        /* ============ LOCATION ============ */
+        #location{background:var(--cream-50)}
+        .loc-grid{
+            display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;
+        }
+        @media(max-width:900px){.loc-grid{grid-template-columns:1fr}}
+        .loc-info h3{font-size:1.6rem;color:var(--green-800);font-weight:800;margin-bottom:18px}
+        .loc-point{
+            display:flex;gap:16px;padding:18px;border-radius:18px;
+            background:var(--white);margin-bottom:14px;
+            border:1px solid var(--cream-200);
+            transition:all .3s;
+        }
+        .loc-point:hover{border-color:var(--gold-500);transform:translateX(-6px)}
+        .loc-point i{
+            width:52px;height:52px;border-radius:16px;
+            background:linear-gradient(135deg,var(--green-700),var(--green-600));
+            color:var(--gold-500);display:grid;place-items:center;
+            font-size:1.3rem;flex-shrink:0;
+        }
+        .loc-point h4{font-weight:800;color:var(--green-800);margin-bottom:4px}
+        .loc-point p{color:var(--ink-500);font-size:.95rem}
+        .loc-map{
+            width:100%;height:440px;border-radius:var(--radius-xl);
+            overflow:hidden;box-shadow:var(--shadow-md);
+            background:url('https://maps.googleapis.com/maps/api/staticmap?center=18.326,42.650&zoom=9&size=800x600&scale=2&maptype=terrain') center/cover,
+                       linear-gradient(135deg,var(--green-700),var(--green-500));
+            position:relative;
+            display:grid;place-items:center;color:#fff;text-align:center;padding:20px;
+        }
+        .loc-map::before{
+            content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,69,35,.7),rgba(45,95,46,.5));
+        }
+        .loc-map-inner{position:relative;z-index:2}
+        .loc-map-pin{
+            width:80px;height:80px;border-radius:50%;
+            background:var(--gold-500);color:var(--green-900);
+            display:grid;place-items:center;font-size:2rem;
+            margin:0 auto 16px;
+            animation:pulse 2s ease-in-out infinite;
+            box-shadow:0 0 0 0 rgba(212,160,74,.6);
+        }
+        @keyframes pulse{
+            0%{box-shadow:0 0 0 0 rgba(212,160,74,.6)}
+            70%{box-shadow:0 0 0 25px rgba(212,160,74,0)}
+            100%{box-shadow:0 0 0 0 rgba(212,160,74,0)}
+        }
+        .loc-map h4{font-size:1.4rem;font-weight:800;margin-bottom:6px}
+        .loc-map p{color:#e8dfc9}
+        .loc-map .btn{margin-top:18px}
+
+        /* ============ FAQ ============ */
+        #faq{background:var(--white)}
+        .faq-wrap{max-width:820px;margin:0 auto}
+        .faq-item{
+            background:var(--cream-50);border:1px solid var(--cream-200);
+            border-radius:20px;margin-bottom:12px;overflow:hidden;
+            transition:all .3s;
+        }
+        .faq-item.open{border-color:var(--gold-500);background:var(--white);box-shadow:var(--shadow-sm)}
+        .faq-q{
+            width:100%;padding:20px 24px;
+            display:flex;align-items:center;justify-content:space-between;gap:14px;
+            font-weight:700;color:var(--green-800);font-size:1.05rem;
+            text-align:right;transition:.3s;
+        }
+        .faq-q:hover{color:var(--gold-600)}
+        .faq-q .caret{
+            width:32px;height:32px;border-radius:50%;
+            background:var(--cream-200);color:var(--amber-700);
+            display:grid;place-items:center;transition:.3s;flex-shrink:0;
+        }
+        .faq-item.open .faq-q .caret{transform:rotate(180deg);background:var(--gold-500);color:var(--green-900)}
+        .faq-a{
+            max-height:0;overflow:hidden;
+            transition:max-height .4s ease;
+        }
+        .faq-a-inner{padding:0 24px 22px;color:var(--ink-700);line-height:1.8}
+        .faq-item.open .faq-a{max-height:300px}
+
+        /* ============ CTA BANNER ============ */
+        .cta-banner{
+            background:linear-gradient(135deg,var(--gold-500),var(--gold-600));
+            color:var(--green-900);padding:60px 24px;
+            text-align:center;position:relative;overflow:hidden;
+        }
+        .cta-banner::before,.cta-banner::after{
+            content:"\f4d8";font-family:"Font Awesome 6 Free";font-weight:900;
+            position:absolute;font-size:180px;color:rgba(255,255,255,.1);
+        }
+        .cta-banner::before{top:-40px;right:-30px;transform:rotate(15deg)}
+        .cta-banner::after{bottom:-40px;left:-30px;transform:rotate(-15deg)}
+        .cta-banner h2{
+            font-size:clamp(1.8rem,4vw,2.6rem);
+            font-weight:900;margin-bottom:12px;position:relative;
+        }
+        .cta-banner p{font-size:1.1rem;max-width:640px;margin:0 auto 22px;position:relative}
+        .cta-banner .btn{
+            background:var(--green-800);color:var(--cream-100);
+            box-shadow:0 10px 25px rgba(21,51,26,.3);
+        }
+        .cta-banner .btn:hover{background:var(--green-900)}
+
+        /* ============ FOOTER ============ */
+        .footer{
+            background:linear-gradient(180deg,var(--green-900),var(--green-800));
+            color:var(--cream-100);padding:70px 0 25px;
+        }
+        .footer-grid{
+            display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:40px;
+        }
+        @media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:34px}}
+        @media(max-width:520px){.footer-grid{grid-template-columns:1fr}}
+        .footer h4{
+            font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:20px;
+            position:relative;padding-bottom:12px;
+        }
+        .footer h4::after{
+            content:"";position:absolute;bottom:0;right:0;
+            width:40px;height:3px;background:var(--gold-500);border-radius:2px;
+        }
+        .footer-about .brand{margin-bottom:16px}
+        .footer-about p{color:#bfb79e;font-size:.95rem;margin-bottom:18px;line-height:1.8}
+        .footer a{color:#d3c9a8;display:flex;align-items:center;gap:10px;margin:10px 0;transition:.25s;font-size:.95rem}
+        .footer a:hover{color:var(--gold-500);transform:translateX(-4px)}
+        .footer a i{width:20px;color:var(--gold-500);font-size:.9rem}
+        .social-icons{display:flex;gap:10px;margin-top:16px}
+        .social-icons a{
+            width:40px;height:40px;border-radius:12px;
+            background:rgba(255,255,255,.08);
+            color:var(--gold-500);
+            display:grid;place-items:center;font-size:1.1rem;
+            transition:.3s;margin:0;
+        }
+        .social-icons a:hover{background:var(--gold-500);color:var(--green-900);transform:translateY(-3px)}
+        .newsletter{
+            display:flex;gap:8px;margin-top:14px;
+            background:rgba(255,255,255,.06);
+            border:1px solid rgba(255,255,255,.1);
+            border-radius:14px;padding:4px;
+        }
+        .newsletter input{
+            flex:1;background:transparent;border:none;outline:none;
+            color:#fff;padding:10px 14px;font-family:inherit;
+        }
+        .newsletter input::placeholder{color:#a8a088}
+        .newsletter button{
+            background:var(--gold-500);color:var(--green-900);
+            padding:10px 16px;border-radius:10px;font-weight:700;
+        }
+        .footer-bottom{
+            margin-top:50px;padding-top:25px;
+            border-top:1px solid rgba(255,255,255,.08);
+            text-align:center;color:#a8a088;font-size:.9rem;
+        }
+
+        /* ============ FLOATING WHATSAPP ============ */
+        .whatsapp-float{
+            position:fixed;bottom:24px;left:24px;z-index:90;
+            width:60px;height:60px;border-radius:50%;
+            background:#25D366;color:#fff;
+            display:grid;place-items:center;font-size:1.8rem;
+            box-shadow:0 10px 30px rgba(37,211,102,.5);
+            animation:wiggle 3s ease-in-out infinite;
+            transition:transform .3s;
+        }
+        .whatsapp-float:hover{transform:scale(1.1)}
+        @keyframes wiggle{
+            0%,100%{transform:rotate(0)}
+            10%,30%{transform:rotate(-10deg)}
+            20%,40%{transform:rotate(10deg)}
+            50%{transform:rotate(0)}
+        }
+        .whatsapp-float::before{
+            content:"";position:absolute;inset:-6px;border-radius:50%;
+            border:2px solid #25D366;opacity:.5;
+            animation:pulse-ring 2s ease-out infinite;
+        }
+        @keyframes pulse-ring{
+            0%{transform:scale(1);opacity:.6}
+            100%{transform:scale(1.5);opacity:0}
+        }
+
+        /* ============ REVEAL ANIMATIONS ============ */
+        [data-reveal]{opacity:0;transform:translateY(30px);transition:all .9s ease}
+        [data-reveal].visible{opacity:1;transform:translateY(0)}
+        [data-reveal="right"]{transform:translateX(30px)}
+        [data-reveal="right"].visible{transform:translateX(0)}
+        [data-reveal="left"]{transform:translateX(-30px)}
+        [data-reveal="left"].visible{transform:translateX(0)}
+
+        /* ============ UTIL ============ */
+        @media(max-width:640px){
+            section{padding:70px 0}
+            .section-head{margin-bottom:40px}
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<header class="topbar" id="topbar">
+    <div class="topbar-inner">
+        <div class="nav-start">
+            <a href="#hero" class="brand">
+                <div class="brand-icon"><i class="fas fa-tree"></i></div>
+                <div class="brand-text">
+                    <div class="brand-title">ارياف</div>
+                    <div class="brand-sub">مزرعة و اكواخ ريفية</div>
+                </div>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#about">عن المزرعة</a>
+                <a href="#experiences">التجارب</a>
+                <a href="#gallery">المعرض</a>
+                <a href="#packages">الباقات</a>
+                <a href="#location">الموقع</a>
+                <a href="#faq">الأسئلة</a>
+            </nav>
+        </div>
+        <div class="nav-end">
+            <a href="#book" class="nav-cta"><i class="fas fa-calendar-check"></i> احجز الآن</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+    <div class="hero-slides">
+        <div class="hero-slide active" style="background-image:url('lodge-view.jpg')"></div>
+        <div class="hero-slide" style="background-image:url('mountain-view.jpeg')"></div>
+        <div class="hero-slide" style="background-image:url('lodge2.jpeg')"></div>
+        <div class="hero-slide" style="background-image:url('strawberries.jpeg')"></div>
+        <div class="hero-slide" style="background-image:url('castle-view.jpg')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-datetime">
+        <div class="date" id="currentDate">جاري التحميل...</div>
+        <div class="time" id="currentTime">--:--</div>
+    </div>
+
+    <div class="hero-content">
+        <div class="hero-eyebrow">
+            <i class="fas fa-location-dot"></i> طبب - شمال شرق أبها
+        </div>
+        <h1>استرخِ في أحضان <span class="accent">الطبيعة الخلابة</span><br>بين الجبال والبساتين</h1>
+        <p class="hero-sub">مزرعة و اكواخ ارياف — إقامة ريفية فاخرة، قطاف يومي من الفراولة والتوت، ومسارات مشي بجوار قلاع آل متحمي التاريخية.</p>
+        <div class="hero-ctas">
+            <a href="#book" class="btn btn-primary"><i class="fas fa-calendar-check"></i> احجز إقامتك الآن</a>
+            <a href="#experiences" class="btn btn-ghost"><i class="fas fa-play"></i> اكتشف التجارب</a>
+        </div>
+    </div>
+
+    <a href="#stats" class="hero-scroll">
+        <small>اسحب للأسفل</small>
+        <i class="fas fa-chevron-down"></i>
+    </a>
+</section>
+
+<!-- ===== STATS STRIP ===== -->
+<section class="stats-strip" id="stats" style="padding:70px 24px 50px">
+    <div class="stats-grid">
+        <div class="stat" data-reveal>
+            <i class="fas fa-home"></i>
+            <span class="stat-num" data-count="6">0</span>
+            <div class="stat-label">اكواخ فاخرة</div>
+        </div>
+        <div class="stat" data-reveal>
+            <i class="fas fa-seedling"></i>
+            <span class="stat-num" data-count="20">0</span>
+            <div class="stat-label">نوع من الفواكه</div>
+        </div>
+        <div class="stat" data-reveal>
+            <i class="fas fa-smile-beam"></i>
+            <span class="stat-num" data-count="1200" data-suffix="+">0</span>
+            <div class="stat-label">ضيف سعيد</div>
+        </div>
+        <div class="stat" data-reveal>
+            <i class="fas fa-star"></i>
+            <span class="stat-num" data-count="4.9">0</span>
+            <div class="stat-label">تقييم الزوار</div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-text" data-reveal="right">
+                <div class="section-kicker"><i class="fas fa-leaf"></i> عن المكان</div>
+                <h2>ملاذك الريفي <span class="accent">بعيداً عن صخب المدينة</span></h2>
+                <p>تقع <strong>مزرعة و اكواخ ارياف</strong> في منطقة <strong>طبب</strong> شمال شرق أبها بحوالي 28 كم، في أحضان الطبيعة الخلابة. نتمتع بموقع هادئ يُطل على الجبال الخضراء والأودية الجارية بالمياه، حيث يمكنكم الاسترخاء والاستمتاع بالمناظر الساحرة.</p>
+                <p>نُعتبر قريبين جداً من المعالم التاريخية العريقة، إذ تبعد عنا <strong>حصون وقلاع آل متحمي</strong> و<strong>قلعة الأمير طامي بن شعيب المتحمي</strong> حوالي 300 متر فقط، ويمكننا ترتيب زيارات مخفضة لهذه المواقع.</p>
+
+                <div class="about-highlights">
+                    <div class="hl">
+                        <i class="fas fa-mountain"></i>
+                        <div>إطلالات جبلية
+                            <span>مناظر بانورامية خلابة</span>
+                        </div>
+                    </div>
+                    <div class="hl">
+                        <i class="fas fa-water"></i>
+                        <div>أودية ومياه
+                            <span>جداول جارية عذبة</span>
+                        </div>
+                    </div>
+                    <div class="hl">
+                        <i class="fas fa-wind"></i>
+                        <div>هواء نقي
+                            <span>أجواء ريفية منعشة</span>
+                        </div>
+                    </div>
+                    <div class="hl">
+                        <i class="fas fa-landmark"></i>
+                        <div>قلاع تاريخية
+                            <span>على بُعد 300 متر فقط</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-visual" data-reveal="left">
+                <div class="main-img"></div>
+                <div class="stamp">
+                    <div>
+                        <span>٢٨</span>
+                        كم من أبها<br>
+                        <small style="font-weight:400;font-size:.7rem">وسط الطبيعة</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section id="features">
+    <div class="container">
+        <div class="section-head" data-reveal>
+            <div class="section-kicker"><i class="fas fa-star"></i> لماذا نحن؟</div>
+            <h2 class="section-title">تجربة ريفية <span class="accent">لا تُنسى</span></h2>
+            <div class="divider"><i class="fas fa-gem"></i></div>
+            <p class="section-lead">كل تفصيل في ارياف مصمم ليمنحك الراحة والخصوصية وتواصلاً حقيقياً مع الطبيعة.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature" data-reveal>
+                <div class="feature-icon"><i class="fas fa-home"></i></div>
+                <h4>اكواخ مجهزة بالكامل</h4>
+                <p>3 غرف نوم، مطبخ متكامل، واي فاي، ومكيفات — كل ما تحتاجه بطراز ريفي فاخر.</p>
+            </div>
+            <div class="feature" data-reveal>
+                <div class="feature-icon"><i class="fas fa-basket-shopping"></i></div>
+                <h4>قطاف يومي مجاني</h4>
+                <p>اقطف الفراولة والتوت الأسود والفواكه الموسمية مباشرة من بساتيننا العضوية.</p>
+            </div>
+            <div class="feature" data-reveal>
+                <div class="feature-icon"><i class="fas fa-mug-saucer"></i></div>
+                <h4>إفطار ريفي يومي</h4>
+                <p>سلة إفطار طازجة من منتجات المزرعة: عسل، فواكه، ومخبوزات دافئة.</p>
+            </div>
+            <div class="feature" data-reveal>
+                <div class="feature-icon"><i class="fas fa-person-hiking"></i></div>
+                <h4>مسارات هايكينج</h4>
+                <p>دروب مشي مُعلّمة بين الأودية والصخور مع نقاط استراحة وتصوير.</p>
+            </div>
+            <div class="feature" data-reveal>
+                <div class="feature-icon"><i class="fas fa-fire"></i></div>
+                <h4>جلسات سمر</h4>
+                <p>ركنة نار مُعدّة تحت النجوم للسهرات العائلية في ليالٍ لا تُنسى.</p>
+            </div>
+            <div class="feature" data-reveal>
+                <div class="feature-icon"><i class="fas fa-child-reaching"></i></div>
+                <h4>ألعاب أطفال آمنة</h4>
+                <p>مناطق مخصصة للأطفال مع ألعاب خشبية وسط الخضرة.</p>
+            </div>
+            <div class="feature" data-reveal>
+                <div class="feature-icon"><i class="fas fa-horse"></i></div>
+                <h4>ركوب الخيل</h4>
+                <p>تجول بين المزارع وعلى الحواف الجبلية بصحبة مدرب مختص.</p>
+            </div>
+            <div class="feature" data-reveal>
+                <div class="feature-icon"><i class="fas fa-wifi"></i></div>
+                <h4>استقبال 24 ساعة</h4>
+                <p>فريق ضيافة متواجد طوال اليوم لتلبية كل احتياجاتك.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== EXPERIENCES ===== -->
+<section id="experiences">
+    <div class="container">
+        <div class="section-head" data-reveal>
+            <div class="section-kicker"><i class="fas fa-heart"></i> ما ينتظرك</div>
+            <h2 class="section-title">تجارب <span class="accent">تصنع الذكريات</span></h2>
+            <div class="divider"><i class="fas fa-leaf"></i></div>
+            <p class="section-lead">من الإقامة الفاخرة إلى قطاف الفواكه والاستكشاف التاريخي — كل شيء في مكان واحد.</p>
+        </div>
+
+        <div class="exp-grid">
+            <!-- Lodge -->
+            <div class="exp-card" data-reveal>
+                <div class="exp-img">
+                    <img src="lodge-view.jpg" alt="الاكواخ الخاصة">
+                    <span class="exp-tag"><i class="fas fa-crown"></i> الأكثر طلباً</span>
+                </div>
+                <div class="exp-body">
+                    <h3><i class="fas fa-home"></i> الاكواخ الخاصة</h3>
+                    <p>اكواخ من طابقين بمواصفات فاخرة: 3 غرف نوم، 3 حمامات، وصالة معيشة واسعة مع شرفة تطل على الجبال.</p>
+                    <ul class="exp-features">
+                        <li>شرفة مطلة على المزرعة والجبال</li>
+                        <li>مكيفات وواي فاي مجاني عالي السرعة</li>
+                        <li>سلة إفطار يومية من منتجات المزرعة</li>
+                        <li>باقة ترحيب من الفواكه الموسمية</li>
+                    </ul>
+                    <div class="exp-foot">
+                        <div class="exp-badge"><i class="fas fa-star"></i> إقامة ريفية فاخرة</div>
+                        <a href="#book" style="color:var(--gold-600);font-weight:700">احجز <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strawberries -->
+            <div class="exp-card" data-reveal>
+                <div class="exp-img">
+                    <img src="strawberries.jpeg" alt="الفراولة والتوت">
+                    <span class="exp-tag"><i class="fas fa-leaf"></i> عضوي 100%</span>
+                </div>
+                <div class="exp-body">
+                    <h3><i class="fas fa-seedling"></i> الفراولة والتوت الأسود</h3>
+                    <p>قطاف يومي مجاني للضيوف من حقول الفراولة العضوية والتوت الأسود الطازج — تجربة لا تُنسى للعائلة.</p>
+                    <ul class="exp-features">
+                        <li>أصناف فريدة من الفراولة</li>
+                        <li>سلة قطاف مقدمة مجاناً لكل كوخ</li>
+                        <li>نشاط ممتع للأطفال والكبار</li>
+                    </ul>
+                    <div class="exp-foot">
+                        <div class="exp-badge"><i class="fas fa-hand-peace"></i> قطاف يومي مجاني</div>
+                        <a href="#book" style="color:var(--gold-600);font-weight:700">جرّب <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Orchards -->
+            <div class="exp-card" data-reveal>
+                <div class="exp-img">
+                    <img src="mountain-view.jpeg" alt="بساتين الفاكهة">
+                    <span class="exp-tag"><i class="fas fa-apple-whole"></i> موسمي</span>
+                </div>
+                <div class="exp-body">
+                    <h3><i class="fas fa-apple-whole"></i> بساتين الفاكهة المتنوعة</h3>
+                    <p>حدائقنا تضم أشجار تفاح، برتقال، رمان، تين، عنب، كمثرى، مشمش وخوخ. حصاد طازج مباشرة من الأشجار.</p>
+                    <ul class="exp-features">
+                        <li>أشجار عضوية معمرة</li>
+                        <li>مناطق نزهة بين البساتين</li>
+                        <li>إمكانية شراء المنتجات الطازجة</li>
+                    </ul>
+                    <div class="exp-foot">
+                        <div class="exp-badge"><i class="fas fa-seedling"></i> حصاد للعائلة</div>
+                        <a href="#book" style="color:var(--gold-600);font-weight:700">اكتشف <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hiking -->
+            <div class="exp-card" data-reveal>
+                <div class="exp-img">
+                    <img src="canyon-view.jpeg" alt="مسارات الوادي" onerror="this.src='mountain-view.jpeg'">
+                    <span class="exp-tag"><i class="fas fa-mountain"></i> مغامرة</span>
+                </div>
+                <div class="exp-body">
+                    <h3><i class="fas fa-person-hiking"></i> مسارات الوادي والجبال</h3>
+                    <p>وادٍ خلاب بمياه جارية ومسارات مشي رائعة وسط الطبيعة. مناظر بانورامية للجبال المحيطة.</p>
+                    <ul class="exp-features">
+                        <li>درب هايكينج ممتد بين الصخور</li>
+                        <li>جداول مياه عذبة جارية</li>
+                        <li>نقاط مخصصة للجلوس والتصوير</li>
+                    </ul>
+                    <div class="exp-foot">
+                        <div class="exp-badge"><i class="fas fa-water"></i> جداول ومناظر ساحرة</div>
+                        <a href="#book" style="color:var(--gold-600);font-weight:700">استكشف <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Castles -->
+            <div class="exp-card" data-reveal>
+                <div class="exp-img">
+                    <img src="castle-view.jpg" alt="المعالم التاريخية">
+                    <span class="exp-tag"><i class="fas fa-tag"></i> خصم 20%</span>
+                </div>
+                <div class="exp-body">
+                    <h3><i class="fas fa-landmark"></i> المعالم التاريخية القريبة</h3>
+                    <p>على بعد 300 متر فقط — قلعة الأمير طامي بن شعيب المتحمي وحصون آل متحمي العريقة.</p>
+                    <ul class="exp-features">
+                        <li>خصم خاص 20% لضيوف ارياف</li>
+                        <li>مرشد سياحي محلي متوفر</li>
+                        <li>مواقع تعود لمئات السنين</li>
+                    </ul>
+                    <div class="exp-foot">
+                        <div class="exp-badge"><i class="fas fa-ticket"></i> خصم لضيوف ارياف</div>
+                        <a href="#book" style="color:var(--gold-600);font-weight:700">زُر <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evening -->
+            <div class="exp-card" data-reveal>
+                <div class="exp-img">
+                    <img src="lodge3.jpeg" alt="جلسات السمر">
+                    <span class="exp-tag"><i class="fas fa-moon"></i> ليلي</span>
+                </div>
+                <div class="exp-body">
+                    <h3><i class="fas fa-fire"></i> جلسات سمر ونار</h3>
+                    <p>ليالٍ سحرية تحت النجوم حول ركنة النار، مع قهوة عربية وحلى ريفية وقصص من التراث.</p>
+                    <ul class="exp-features">
+                        <li>ركنة نار مُعدّة بأمان</li>
+                        <li>قهوة عربية وتمر مجاناً</li>
+                        <li>سماء صافية مثالية لرصد النجوم</li>
+                    </ul>
+                    <div class="exp-foot">
+                        <div class="exp-badge"><i class="fas fa-star"></i> تجربة ليلية مميزة</div>
+                        <a href="#book" style="color:var(--gold-600);font-weight:700">احجز <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery">
+    <div class="container">
+        <div class="section-head" data-reveal>
+            <div class="section-kicker"><i class="fas fa-images"></i> لقطات من ارياف</div>
+            <h2 class="section-title">مشاهد <span class="accent">تأسر القلب</span></h2>
+            <div class="divider"><i class="fas fa-camera"></i></div>
+            <p class="section-lead">جولة بصرية بين الاكواخ والبساتين والمعالم التاريخية.</p>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+            <div class="gi wide tall"><img src="lodge-view.jpg" alt="اكواخ ارياف"></div>
+            <div class="gi"><img src="strawberries.jpeg" alt="قطاف الفراولة"></div>
+            <div class="gi"><img src="lodge2.jpeg" alt="داخل الكوخ"></div>
+            <div class="gi"><img src="mountain-view.jpeg" alt="منظر الجبال"></div>
+            <div class="gi tall"><img src="castle-view.jpg" alt="قلعة آل متحمي"></div>
+            <div class="gi wide"><img src="lodge3.jpeg" alt="المزرعة"></div>
+        </div>
+    </div>
+</section>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lb-close" aria-label="إغلاق"><i class="fas fa-times"></i></button>
+    <button class="lb-prev" aria-label="السابق"><i class="fas fa-chevron-right"></i></button>
+    <img src="" alt="">
+    <button class="lb-next" aria-label="التالي"><i class="fas fa-chevron-left"></i></button>
+</div>
+
+<!-- ===== PACKAGES ===== -->
+<section id="packages">
+    <div class="container">
+        <div class="section-head" data-reveal>
+            <div class="section-kicker"><i class="fas fa-gift"></i> باقات الإقامة</div>
+            <h2 class="section-title">اختر الباقة <span class="accent">المناسبة لك</span></h2>
+            <div class="divider"><i class="fas fa-crown"></i></div>
+            <p class="section-lead">أسعار شاملة مع قطاف يومي وسلة إفطار من منتجات المزرعة.</p>
+        </div>
+
+        <div class="pkg-grid">
+            <div class="pkg" data-reveal>
+                <h3>باقة الاسترخاء</h3>
+                <p style="color:var(--ink-500);font-size:.92rem">إقامة ليلة واحدة</p>
+                <div class="pkg-price"><span class="currency">ر.س</span>750<small>/ ليلة</small></div>
+                <ul class="pkg-list">
+                    <li><i class="fas fa-check"></i> كوخ كامل حتى 6 أشخاص</li>
+                    <li><i class="fas fa-check"></i> سلة إفطار يومية</li>
+                    <li><i class="fas fa-check"></i> قطاف فراولة مجاني</li>
+                    <li><i class="fas fa-check"></i> واي فاي ومكيفات</li>
+                    <li><i class="fas fa-check"></i> مواقف خاصة</li>
+                </ul>
+                <a href="#book" class="btn btn-ghost" style="color:var(--green-800);border-color:var(--green-700);background:transparent">احجز الآن</a>
+            </div>
+
+            <div class="pkg featured" data-reveal>
+                <div class="pkg-crown"><i class="fas fa-star"></i> الأكثر حجزاً</div>
+                <h3>باقة العائلة</h3>
+                <p style="color:#d3d2c3;font-size:.92rem">إقامة 3 ليالٍ</p>
+                <div class="pkg-price"><span class="currency">ر.س</span>1,950<small>/ 3 ليالٍ</small></div>
+                <ul class="pkg-list">
+                    <li><i class="fas fa-check"></i> كل مميزات الاسترخاء</li>
+                    <li><i class="fas fa-check"></i> جلسة سمر حول النار</li>
+                    <li><i class="fas fa-check"></i> جولة هايكينج مع مرشد</li>
+                    <li><i class="fas fa-check"></i> زيارة قلعة آل متحمي بخصم 20%</li>
+                    <li><i class="fas fa-check"></i> عشاء ريفي ليلة واحدة</li>
+                    <li><i class="fas fa-check"></i> ورشة صنع المربى</li>
+                </ul>
+                <a href="#book" class="btn btn-primary">احجز العائلية</a>
+            </div>
+
+            <div class="pkg" data-reveal>
+                <h3>باقة الأسبوع</h3>
+                <p style="color:var(--ink-500);font-size:.92rem">إقامة 7 ليالٍ</p>
+                <div class="pkg-price"><span class="currency">ر.س</span>4,200<small>/ 7 ليالٍ</small></div>
+                <ul class="pkg-list">
+                    <li><i class="fas fa-check"></i> كل مميزات باقة العائلة</li>
+                    <li><i class="fas fa-check"></i> ركوب خيل مرتين</li>
+                    <li><i class="fas fa-check"></i> جلسة تصوير فوتوغرافي احترافية</li>
+                    <li><i class="fas fa-check"></i> خدمة غسيل مجانية</li>
+                    <li><i class="fas fa-check"></i> توصيل من وإلى مطار أبها</li>
+                </ul>
+                <a href="#book" class="btn btn-ghost" style="color:var(--green-800);border-color:var(--green-700);background:transparent">احجز الأسبوعية</a>
+            </div>
+        </div>
+        <p style="text-align:center;margin-top:30px;color:var(--ink-500);font-size:.92rem">
+            <i class="fas fa-info-circle"></i> الأسعار تقريبية وتختلف حسب الموسم. تواصل معنا للحصول على عرض مخصص.
+        </p>
+    </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section id="testimonials">
+    <div class="container">
+        <div class="section-head" data-reveal>
+            <div class="section-kicker"><i class="fas fa-quote-right"></i> آراء الضيوف</div>
+            <h2 class="section-title">قصص <span class="accent">ضيوفنا السعداء</span></h2>
+            <div class="divider"><i class="fas fa-heart"></i></div>
+            <p class="section-lead">أكثر من 1200 ضيف عاشوا تجربة لا تُنسى في مزرعة و اكواخ ارياف.</p>
+        </div>
+
+        <div class="tstm-track" data-reveal>
+            <div class="tstm">
+                <div class="tstm-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="tstm-text">"تجربة سحرية! الاكواخ نظيفة وفخمة، والأطفال استمتعوا جداً بقطاف الفراولة. الإطلالة من الشرفة لا تُصدَّق. سنعود حتماً."</p>
+                <div class="tstm-author">
+                    <div class="tstm-avatar">ع</div>
+                    <div>
+                        <div class="tstm-name">عبدالله الشهري</div>
+                        <div class="tstm-role">عائلة من الرياض</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tstm">
+                <div class="tstm-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="tstm-text">"أكثر مكان ريفي هادئ زرته في عسير. الاستقبال ممتاز، الإفطار من منتجات المزرعة كان لذيذاً، وزيارة القلعة القريبة أضافت بُعداً تاريخياً رائعاً."</p>
+                <div class="tstm-author">
+                    <div class="tstm-avatar">ف</div>
+                    <div>
+                        <div class="tstm-name">فاطمة القحطاني</div>
+                        <div class="tstm-role">ضيفة من جدة</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tstm">
+                <div class="tstm-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="tstm-text">"جلسة السمر حول النار تحت النجوم كانت أسطورية. الوادي القريب مثالي للهايكينج. أنصح الجميع بتجربة ارياف على الأقل مرة واحدة."</p>
+                <div class="tstm-author">
+                    <div class="tstm-avatar">م</div>
+                    <div>
+                        <div class="tstm-name">محمد العمري</div>
+                        <div class="tstm-role">ضيف من الدمام</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== LOCATION ===== -->
+<section id="location">
+    <div class="container">
+        <div class="section-head" data-reveal>
+            <div class="section-kicker"><i class="fas fa-map-location-dot"></i> كيف تصل إلينا</div>
+            <h2 class="section-title">موقعنا <span class="accent">في طبب - أبها</span></h2>
+            <div class="divider"><i class="fas fa-route"></i></div>
+        </div>
+
+        <div class="loc-grid">
+            <div class="loc-info" data-reveal="right">
+                <h3>في قلب الطبيعة، قريب من كل شيء</h3>
+                <div class="loc-point">
+                    <i class="fas fa-plane-arrival"></i>
+                    <div>
+                        <h4>من مطار أبها</h4>
+                        <p>حوالي 35 دقيقة بالسيارة (28 كم) — طريق أسفلتي كامل</p>
+                    </div>
+                </div>
+                <div class="loc-point">
+                    <i class="fas fa-landmark"></i>
+                    <div>
+                        <h4>قلعة آل متحمي</h4>
+                        <p>300 متر فقط — مشياً على الأقدام أو بالسيارة</p>
+                    </div>
+                </div>
+                <div class="loc-point">
+                    <i class="fas fa-city"></i>
+                    <div>
+                        <h4>وسط أبها</h4>
+                        <p>28 كم شمال شرق — يمكن توفير خدمة توصيل بطلب مسبق</p>
+                    </div>
+                </div>
+                <div class="loc-point">
+                    <i class="fas fa-tree-city"></i>
+                    <div>
+                        <h4>منتزه عسير</h4>
+                        <p>45 دقيقة — رحلة يومية رائعة للعائلات</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loc-map" data-reveal="left">
+                <div class="loc-map-inner">
+                    <div class="loc-map-pin"><i class="fas fa-location-dot"></i></div>
+                    <h4>مزرعة و اكواخ ارياف</h4>
+                    <p>طبب — شمال شرق أبها 28 كم</p>
+                    <a href="https://maps.google.com/?q=طبب+أبها" target="_blank" class="btn btn-primary"><i class="fas fa-directions"></i> افتح في الخرائط</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq">
+    <div class="container">
+        <div class="section-head" data-reveal>
+            <div class="section-kicker"><i class="fas fa-circle-question"></i> الأسئلة الشائعة</div>
+            <h2 class="section-title">إجابات <span class="accent">سريعة</span></h2>
+            <div class="divider"><i class="fas fa-comments"></i></div>
+        </div>
+
+        <div class="faq-wrap">
+            <div class="faq-item">
+                <button class="faq-q">
+                    <span>ما الذي يشمله سعر الإقامة؟</span>
+                    <span class="caret"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-a"><div class="faq-a-inner">
+                    يشمل السعر الكوخ الكامل (3 غرف نوم + 3 حمامات + صالة + مطبخ)، سلة إفطار يومية من منتجات المزرعة، قطاف مجاني للفراولة والتوت، واي فاي، مكيفات، مواقف خاصة، ومناطق شواء.
+                </div></div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q">
+                    <span>هل يُسمح باستقبال الأطفال والعائلات؟</span>
+                    <span class="caret"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-a"><div class="faq-a-inner">
+                    بكل تأكيد! ارياف هي وجهة عائلية بامتياز. لدينا ألعاب أطفال، مساحات آمنة، وأنشطة مخصصة للصغار مثل قطاف الفواكه وورش صنع المربى.
+                </div></div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q">
+                    <span>ما هي سياسة الحجز والإلغاء؟</span>
+                    <span class="caret"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-a"><div class="faq-a-inner">
+                    الحجز المسبق مطلوب مع دفعة تأكيد 30% من قيمة الإقامة. الإلغاء مجاني قبل 7 أيام من موعد الوصول، ويُخصم 50% إذا تم الإلغاء خلال الـ 7 أيام السابقة.
+                </div></div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q">
+                    <span>هل تتوفر خدمة التوصيل من المطار؟</span>
+                    <span class="caret"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-a"><div class="faq-a-inner">
+                    نعم، نوفر خدمة توصيل من وإلى مطار أبها الإقليمي بطلب مسبق. تُقدم الخدمة مجاناً مع باقة الأسبوع، وبرسوم رمزية مع الباقات الأخرى.
+                </div></div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q">
+                    <span>ما هي أفضل فترة للزيارة؟</span>
+                    <span class="caret"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-a"><div class="faq-a-inner">
+                    موسم الفراولة يمتد من فبراير إلى مايو، وموسم الفواكه الأخرى من يونيو إلى سبتمبر. الأجواء في أبها معتدلة طوال السنة، لكن الربيع والصيف هما الأمثل للاستمتاع بالبساتين والمياه الجارية.
+                </div></div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q">
+                    <span>هل يمكن استضافة مناسبات خاصة؟</span>
+                    <span class="caret"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-a"><div class="faq-a-inner">
+                    نعم، نستضيف المناسبات العائلية الخاصة مثل أعياد الميلاد، حفلات التخرج، وتجمعات العائلات. تواصل معنا لترتيب عرض مخصص.
+                </div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CTA BANNER ===== -->
+<section class="cta-banner" id="book" style="padding:80px 24px">
+    <div class="container" style="position:relative;z-index:2">
+        <h2>جاهز لتجربة ريفية لا تُنسى؟</h2>
+        <p>احجز إقامتك الآن في مزرعة و اكواخ ارياف واستمتع بخصم 15% على الحجوزات الأسبوعية.</p>
+        <div class="hero-ctas">
+            <a href="https://wa.me/966501234567" target="_blank" class="btn" style="background:#25D366;color:#fff;box-shadow:0 10px 25px rgba(37,211,102,.4)">
+                <i class="fab fa-whatsapp"></i> احجز عبر واتساب
+            </a>
+            <a href="tel:+966501234567" class="btn"><i class="fas fa-phone"></i> اتصل الآن</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <div class="brand">
+                    <div class="brand-icon"><i class="fas fa-tree"></i></div>
+                    <div class="brand-text">
+                        <div class="brand-title">ارياف</div>
+                        <div class="brand-sub">مزرعة و اكواخ ريفية</div>
+                    </div>
+                </div>
+                <p>ملاذ ريفي فاخر في طبب - أبها، حيث تلتقي الجبال بالبساتين والتاريخ بالراحة العصرية.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/966501234567" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Snapchat"><i class="fab fa-snapchat"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4>روابط سريعة</h4>
+                <a href="#about"><i class="fas fa-angle-left"></i> عن المزرعة</a>
+                <a href="#experiences"><i class="fas fa-angle-left"></i> التجارب</a>
+                <a href="#packages"><i class="fas fa-angle-left"></i> الباقات</a>
+                <a href="#gallery"><i class="fas fa-angle-left"></i> المعرض</a>
+                <a href="#faq"><i class="fas fa-angle-left"></i> الأسئلة الشائعة</a>
+            </div>
+
+            <div>
+                <h4>تواصل معنا</h4>
+                <a href="tel:+966501234567"><i class="fas fa-phone"></i> 4567 123 50 966+</a>
+                <a href="https://wa.me/966501234567"><i class="fab fa-whatsapp"></i> واتساب مباشر</a>
+                <a href="mailto:info@aryaf-farm.com"><i class="fas fa-envelope"></i> info@aryaf-farm.com</a>
+                <a href="#"><i class="fas fa-location-dot"></i> طبب - شمال شرق أبها</a>
+                <a href="#"><i class="fas fa-clock"></i> استقبال 24 ساعة</a>
+            </div>
+
+            <div>
+                <h4>اشترك في النشرة</h4>
+                <p style="color:#bfb79e;font-size:.92rem">احصل على العروض الموسمية أولاً.</p>
+                <form class="newsletter" onsubmit="event.preventDefault();alert('شكراً لاشتراكك!');">
+                    <input type="email" placeholder="بريدك الإلكتروني" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <i class="far fa-copyright"></i> 2026 مزرعة و اكواخ ارياف - جميع الحقوق محفوظة | صُمم بحب للطبيعة
+        </div>
+    </div>
+</footer>
+
+<!-- ===== FLOATING WHATSAPP ===== -->
+<a href="https://wa.me/966501234567" target="_blank" class="whatsapp-float" aria-label="تواصل عبر واتساب">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+/* ===== TIME / DATE ===== */
+function updateDateTime(){
+    const now=new Date();
+    const optDate={year:'numeric',month:'long',day:'numeric',weekday:'long'};
+    const fd=now.toLocaleDateString('ar-SA',optDate);
+    let h=now.getHours(), m=now.getMinutes();
+    const ampm=h>=12?'مساءً':'صباحاً';
+    h=h%12||12;
+    const ft=`${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')} ${ampm}`;
+    const dEl=document.getElementById('currentDate');
+    const tEl=document.getElementById('currentTime');
+    if(dEl) dEl.innerText=fd;
+    if(tEl) tEl.innerText=ft;
+}
+updateDateTime();
+setInterval(updateDateTime,60000);
+
+/* ===== MOBILE MENU ===== */
+const mt=document.getElementById('menuToggle');
+const nl=document.getElementById('navLinks');
+mt?.addEventListener('click',()=>nl.classList.toggle('open'));
+nl?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));
+
+/* ===== SCROLL NAV EFFECT ===== */
+const tb=document.getElementById('topbar');
+window.addEventListener('scroll',()=>{
+    if(window.scrollY>60){tb.style.padding='6px 0';tb.style.boxShadow='0 6px 22px rgba(0,0,0,.18)';}
+    else{tb.style.padding='0';tb.style.boxShadow='none';}
+});
+
+/* ===== HERO SLIDESHOW ===== */
+const slides=document.querySelectorAll('.hero-slide');
+let si=0;
+setInterval(()=>{
+    slides[si].classList.remove('active');
+    si=(si+1)%slides.length;
+    slides[si].classList.add('active');
+},5500);
+
+/* ===== SCROLL REVEAL ===== */
+const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});
+},{threshold:.12});
+document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+
+/* ===== COUNTER ANIMATION ===== */
+const counterObs=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+        if(!e.isIntersecting) return;
+        const el=e.target;
+        const target=parseFloat(el.dataset.count);
+        const suffix=el.dataset.suffix||'';
+        const isDecimal=target%1!==0;
+        let cur=0;
+        const step=target/60;
+        const timer=setInterval(()=>{
+            cur+=step;
+            if(cur>=target){cur=target;clearInterval(timer);}
+            el.textContent=(isDecimal?cur.toFixed(1):Math.floor(cur))+suffix;
+        },22);
+        counterObs.unobserve(el);
+    });
+},{threshold:.4});
+document.querySelectorAll('.stat-num').forEach(el=>counterObs.observe(el));
+
+/* ===== FAQ ACCORDION ===== */
+document.querySelectorAll('.faq-q').forEach(q=>{
+    q.addEventListener('click',()=>{
+        const item=q.parentElement;
+        const wasOpen=item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+        if(!wasOpen) item.classList.add('open');
+    });
+});
+
+/* ===== GALLERY LIGHTBOX ===== */
+const lb=document.getElementById('lightbox');
+const lbImg=lb.querySelector('img');
+const gImgs=[...document.querySelectorAll('#galleryGrid .gi img')];
+let gi=0;
+function openLb(i){gi=i;lbImg.src=gImgs[gi].src;lbImg.alt=gImgs[gi].alt;lb.classList.add('open');}
+function closeLb(){lb.classList.remove('open');}
+function nextLb(dir){gi=(gi+dir+gImgs.length)%gImgs.length;lbImg.src=gImgs[gi].src;lbImg.alt=gImgs[gi].alt;}
+gImgs.forEach((img,i)=>img.parentElement.addEventListener('click',()=>openLb(i)));
+lb.querySelector('.lb-close').addEventListener('click',closeLb);
+lb.querySelector('.lb-next').addEventListener('click',()=>nextLb(1));
+lb.querySelector('.lb-prev').addEventListener('click',()=>nextLb(-1));
+lb.addEventListener('click',(e)=>{if(e.target===lb)closeLb();});
+document.addEventListener('keydown',(e)=>{
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')closeLb();
+    if(e.key==='ArrowRight')nextLb(-1); // RTL
+    if(e.key==='ArrowLeft')nextLb(1);
+});
+</script>
+</body>
+</html>
